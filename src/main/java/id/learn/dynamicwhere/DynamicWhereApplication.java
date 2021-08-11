@@ -47,8 +47,6 @@ public class DynamicWhereApplication implements CommandLineRunner {
 
 		List<Student> mockStudentList = Arrays.asList(student1, student2, student3, student4);
 
-		studentRepository.saveAll(mockStudentList);
-
-
+		mockStudentList.forEach(student -> studentRepository.save(student));
 	}
 }
